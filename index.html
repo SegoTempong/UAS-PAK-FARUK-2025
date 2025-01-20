@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samudera Pulsa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Samudera Pulsa</h1>
+    </header>
+
+    <main>
+      <section class="form-section">
+        <h2>Tambah Pulsa</h2>
+        <form id="pulsa-form" onsubmit="tambahPulsa(event)">
+          <input type="text" id="nomor-hp" placeholder="Nomor HP" required />
+          <select id="operator" required>
+            <option value="" disabled selected>Pilih Operator</option>
+            <option value="Telkomsel">Telkomsel</option>
+            <option value="XL">XL</option>
+            <option value="Indosat">Indosat</option>
+          </select>
+          <input type="number" id="nominal" placeholder="Nominal Pulsa" required />
+          <button type="submit" class="btn-primary">Tambah</button>
+        </form>
+      </section>
+
+      <section class="table-section">
+        <h2>Data Pulsa</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nomor HP</th>
+              <th>Operator</th>
+              <th>Nominal</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="tabel-data"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
